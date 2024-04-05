@@ -85,7 +85,7 @@ void checkResponse() {
   if ((handShakeStep == 120) && (lastResponseOK == 1)) {
     // we have SoC response, let's process it
     // 056234510C0DC2AAAA - 05 623451 - header, AAAA - footer
-    // 0DC2 - value in HEX, to be multiplied by 1 for Available Energy in kWh
+    // 0DC2 - value in HEX, to be multiplied by 1 for Available Range in km
     String AvailableRange = elmResponse;
     AvailableRange.replace("05623451", "");
     AvailableRange = AvailableRange.substring(0, 4);
